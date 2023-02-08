@@ -1,0 +1,25 @@
+########################################
+###   Fee overrides configurations   ###
+########################################
+
+# For more detailed information: https://docs.hummingbot.io
+template_version: 11
+
+# Example of the fields that can be specified to override the `TradeFeeFactory` default settings.
+# If the field is missing or the value is left blank, the default value will be used.
+# The percentage values are specified as 0.1 for 0.1%.
+#
+# [exchange name]_percent_fee_token:
+# [exchange name]_maker_percent_fee:
+# [exchange name]_taker_percent_fee:
+# [exchange name]_buy_percent_fee_deducted_from_returns:  # if False, the buy fee is added to the order costs
+# [exchange name]_maker_fixed_fees:  # a list of lists of token-fee pairs (e.g. [["ETH", 1]])
+# [exchange name]_taker_fixed_fees:  # a list of lists of token-fee pairs (e.g. [["ETH", 1]])
+
+binance_percent_fee_token:  # BNB
+binance_maker_percent_fee:  # 0.75
+binance_taker_percent_fee:  # 0.75
+binance_buy_percent_fee_deducted_from_returns:  # True
+
+balancer_maker_fixed_fees:  # [[ETH, 0.0002]]
+balancer_taker_fixed_fees:  # [[ETH, 0.0002]]
